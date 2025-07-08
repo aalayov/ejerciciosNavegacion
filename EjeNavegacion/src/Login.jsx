@@ -20,7 +20,7 @@ function Login() {
         if (nombre === 'admin' && password === 'admin') {
             //setSearchParams({ auth: "true" });
             //<Navigate to="/admin?auth=true"" replace />
-            navigate("/admin?auth=true");
+            navigate("/admin?auth=true", { replace: true });
         } else
             setError("Credenciales incorrectas");
     }

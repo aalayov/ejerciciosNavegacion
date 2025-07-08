@@ -1,10 +1,10 @@
 import React from 'react';
 import cursos from "./data/data.js";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import { Outlet, Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 import { useTranslation } from "./context/LanguageContext.jsx";
-import { useContext } from "react";
+//import { useContext } from "react";
 
 function Cursos() {
     const [searchParams, setSearchParams] = useSearchParams();
