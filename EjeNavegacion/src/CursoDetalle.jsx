@@ -1,4 +1,4 @@
-import cursos from "./data/cursos.js";
+import cursos from "./data/data.js";
 import { useParams } from 'react-router-dom';
 
 function CursoDetalle() {

@@ -1,22 +1,28 @@
 
 import { Form, Button } from 'react-bootstrap'
 import { useState } from 'react';
-import { useSearchParams, Navigate } from "react-router-dom";
+import { useSearchParams, Navigate, useNavigate } from "react-router-dom";
 
 
 
 function Login() {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
+    const [error, setError] = useState(""); // Estado para el error
+
+    /*const [searchParams, setSearchParams] = useSearchParams();
     const auth = searchParams.get('auth');
+    */
 
     function login(event) {
         event.preventDefault();
-        console.log(nombre, password);
+        //console.log(nombre, password);
         if (nombre === 'admin' && password === 'admin') {
-            setSearchParams({ auth: "true" });
-            <Navigate to="/admin" replace />
-        }
+            //setSearchParams({ auth: "true" });
+            //<Navigate to="/admin?auth=true"" replace />
+            navigate("/admin?auth=true");
+        } else
+            setError("Credenciales incorrectas");
     }
 
 
@@ -73,6 +79,7 @@ function Login() {
             <Button variant="primary" type="submit" onClick={login}>
                 Login
             </Button>
+            {error && <p style={{ color: "red" }}>{error}</p>} {/*  Mostrar mensaje si hay error */}
         </Form >
     )
 }

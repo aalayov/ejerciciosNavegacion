@@ -40,3 +40,57 @@
 .read-the-docs {
   color: #888;
 }
+
+/*Verificar porque se debe agregar esto */
+body.theme-dark {
+  background-color: black;
+  color: white;
+}
+
+body.theme-light {
+  background-color: white;
+  color: black;
+}
+
+/*tema claro para el navbar */
+body.theme-light .custom-navbar {
+  background-color: white;
+  color: black;
+}
+
+body.theme-light .custom-navbar .nav-link {
+  color: black !important;
+}
+
+/*tema oscuro para el navbar */
+body.theme-dark .custom-navbar {
+  background-color: black;
+  color: white;
+}
+
+body.theme-dark .custom-navbar .nav-link {
+  color: white !important;
+}
+
+
+/* Tema claro para container y card */
+body.theme-light .container {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.theme-light .card {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+/* Tema oscuro para container y card*/
+body.theme-dark .container {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.theme-dark .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
